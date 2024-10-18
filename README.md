@@ -75,9 +75,47 @@ xrandr --output "{monitor}" --mode "1920x1080"
 
    
 # DWM patching
-1. Center floating window.
+1. How to patch DWM.
 
-    [Always Center](https://dwm.suckless.org/patches/alwayscenter/)
+    alwayscenter:
+    [Always Center Patch:](https://dwm.suckless.org/patches/alwayscenter/)
+
+    uselessgap:
+    []()
+
+    attachabove:
+    []()
+
+2. Create patche folder inside DWM Dir. you can undo changes..
+
+    create and move patches inside <b>dwm/patches/</b>
+    ```shell
+    mkdir patches
+    mv pathes/* /dwm/patches/
+    ```
+    To make backup
+    ```shell
+    cp config.h config.def.h
+    ```
+    To patch <b>DWM</b>
+    ```shell
+    # goto dwm folder.
+    cd dwm
+    
+    #type patch -i patch_name
+    patch -i patches/(patche name)
+
+    # after patch make DWM again..
+    sudo make clean install
+    ```
+    >[!NOTE] 
+    > patching file does not make change in config.h
+    > Cuz this is main config file..
+
+    then restart dwm
+    `Ctrl+Shift+q` exit <b>dwm</b>
+    `xinitrc`
+
     
 
     
