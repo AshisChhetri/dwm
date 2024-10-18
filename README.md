@@ -1,5 +1,38 @@
 # DWM install and Setup
 
+--Terminal font
+<code>$ setfont ter-128n </code>
+
+Require packages
+```shell
+sudo pacman -S xorg-server xorg-init xorg-xrandr xorg-xsetroot /
+    nitrogen picom
+```
+
+```
+#remove
+twm &
+xclock
+xterm
+xterm
+exec xterm
+
+# Add
+# resolution
+xrandr --output Virtual-1 --mode 1920x1080 &
+
+# Wallpaper nitrogen
+nitrogen --restore &
+# Compositor
+picom -f &
+
+# Exec DWM
+exec dwm
+
+```
+
+
+
 Install <b>yay</b>.. in <b>/opt</b> Dir
  ```shell
     sudo pacman -S --needed git base-devel
