@@ -30,6 +30,12 @@ Install <b>yay</b>.. in <b>/opt</b> Dir
     ```shell
     mkdir suckless
     mv dwn dmenu st suckless/
+
+    Require packages before install
+    ```shell
+    yay -Sy freetype2 libx11 libxfit libxinerama
+    ```
+
     ```
     Install DWM
     ```shell
